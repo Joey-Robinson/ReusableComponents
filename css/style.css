@@ -1,2 +1,198 @@
 html {
   font-size: 62.5%; }
+
+.Btn, .Btn:link, .Btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.Btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(12, 6, 6, 0.2); }
+  .Btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.Btn:active, .Btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(12, 6, 6, 0.2); }
+
+.Btn-White {
+  background: #ffffff;
+  color: #757474; }
+  .Btn-White::after {
+    background: #ffffff; }
+
+.Btn-Green {
+  background-color: #28b485;
+  color: #ffffff; }
+
+.Btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.Btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.Btn-Text:link, .Btn-Text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #55c57a;
+  padding: .3rem;
+  transition: all .2s; }
+
+.Btn-Text:hover {
+  background: #55c57a;
+  color: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(12, 6, 6, 0.15);
+  transform: translateY(-0.2rem); }
+
+.Btn-Text:active {
+  box-shadow: 0 0.5rem 1rem rgba(12, 6, 6, 0.15);
+  transform: translateY(0); }
+
+.Card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .Card-Side {
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(12, 6, 6, 0.15); }
+  .Card-Side-Front {
+    background-color: #ffffff; }
+  .Card-Side-Back {
+    transform: rotateY(180deg); }
+    .Card-Side-Back-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .Card-Side-Back-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a); }
+    .Card-Side-Back-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .Card:hover .Card-Side-Front {
+    transform: rotateY(-180deg); }
+  .Card:hover .Card-Side-Back {
+    transform: rotateY(0); }
+  .Card-Picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: color-burn;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem; }
+    .Card-Picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(); }
+    .Card-Picture-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a), url(); }
+    .Card-Picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(); }
+  .Card-Heading {
+    font-size: 2.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 70%; }
+  .Card-Heading-Span {
+    padding: 1rem 1.4rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .Card-Heading-Span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .Card-Heading-Span-2 {
+      background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.85), rgba(85, 197, 122, 0.85)); }
+    .Card-Heading-Span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .Card-Details {
+    padding: 3rem; }
+    .Card-Details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .Card-Details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .Card-Details ul li:not(:last-child) {
+          border-bottom: 0.1rem solid #eee; }
+  .Card-Cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .Card-Price-Box {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 8rem; }
+  .Card-Price-Only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .Card-Price-Value {
+    font-size: 6rem;
+    font-weight: 100; }
+
+.Row {
+  max-width: 114rem;
+  color: #0c0606;
+  margin: 0 auto; }
+  .Row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .Row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .Row [class^="col-"] {
+    float: left; }
+    .Row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .Row .Col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .Row .Col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .Row .Col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .Row .Col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .Row .Col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .Row .Col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.TestGrid {
+  display: flex;
+  width: 50%;
+  align-content: center;
+  justify-content: center; }
