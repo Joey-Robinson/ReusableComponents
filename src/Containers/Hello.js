@@ -5,7 +5,7 @@ class Hello extends Component {
   render() {
     return (
       <div>
-        <Cards />
+        <h1>Hi</h1>
       </div>
     );
   }
