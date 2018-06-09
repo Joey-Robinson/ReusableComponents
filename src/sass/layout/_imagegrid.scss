@@ -1,7 +1,6 @@
 .Container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  // grid-template-rows: 10vh min-content 40vh repeat(3, max-content);
-
-};
+  grid-template-columns: min-content repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 100%;
+}
