@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Cards from '../Component/Cards';
-import ImageContainer from './ImageContainer/ImageContainer';
 
 class Hello extends Component {
   render() {
     return (
       <div>
-        <ImageContainer />
+        <h1>hi</h1>
+        <p>hi</p>
+        <p>test</p>
       </div>
     );
   }
